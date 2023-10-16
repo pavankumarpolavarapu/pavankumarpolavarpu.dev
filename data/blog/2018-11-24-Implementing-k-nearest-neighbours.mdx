@@ -29,7 +29,7 @@ The logic for loading images is already taken care in data_utils.py file assumin
 
 Below is sample visualization of dataset 
 
-![CIFAR Sample](/assets/notebook-images/knn/cifar10-dataset.png)
+![CIFAR Sample](/static/images/notebook-images/knn/cifar10-dataset.png)
 __Figure 1:__ _Samples of the CIFAR-10 Dataset_
 
 As you can see there are 7 samples from each of these 10 categories. These images are tiny compared to our 10 mega pixel mobile images but from the quality of color in these images you can easily say that these images are compressed for computational efficiency. 
@@ -83,7 +83,7 @@ Distance between any two vectors is given by the equation
 $$ d_{2}(\mathbf{X}{i}, \mathbf{X}{j}) = \left\lvert \left\lvert \mathbf{X}{i} - \mathbf{X}{j} \right\rvert \right\rvert = \sqrt{\left\lvert \left\lvert\mathbf{X}{i} \right\rvert \right\rvert^{j} + \left\lvert \left\lvert \mathbf{I}{j}\right\rvert \right\rvert^{j} - 2 \mathbf{X}{i} \cdot \mathbf{X}{j}} $$
 
 For theoretical purposes, Please find proof of distance between two vectors with two basis vectors of x, y co-ordinate plane.
-![Distance Calculation](/assets/notebook-images/knn/distancecalculation.jpg)  
+![Distance Calculation](/static/images/notebook-images/knn/distancecalculation.jpg)  
 __Figure 2:__ _Distance Calculation_
 
 Following is the python code implementation of distance between two vectors.
@@ -99,7 +99,7 @@ def compute_distances_no_loops(self, X):
 ## Visualizing the distances between images
 Once you have the distances of test images with all that of training images, we can plot the distances and visualize the distance matrix. Output will look something like below image
 
-![Distance between Training and Testing Images](/assets/notebook-images/knn/distances.png)  
+![Distance between Training and Testing Images](/static/images/notebook-images/knn/distances.png)  
 __Figure 3:__ _Distance between Training and Testing Images_
 
 One thing that you can observe is, there are structured patterns with different levels of darkness. Brightness indicates greater distance and Darkness indicates smaller distance between training and testing images. 
@@ -193,7 +193,7 @@ for k in sorted(k_to_accuracies):
     for accuracy in k_to_accuracies[k]:
         print('k = %d, accuracy = %f' % (k, accuracy))
 ```
-![Accuracy over K](/assets/notebook-images/knn/crossvalidation.png)  
+![Accuracy over K](/static/images/notebook-images/knn/crossvalidation.png)  
 __Figure 4:__ _Accuracy for different values of K_
 
 Seems like best accuracy is between 10 and 15, we can try more values in the range and decide the ideal K.
